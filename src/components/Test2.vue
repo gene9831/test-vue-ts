@@ -37,9 +37,26 @@
             height: 100%;
           "
         >
-          <el-button :type="getType(i)" size="large" class="a-button"
-            >防腐冰柜{{ i }}</el-button
+          <div
+            style="width: 100%; height: 100%; font-size: small"
+            :class="[
+              'cell-hgrtft',
+              {
+                finish: getType(i) === 'info',
+                using: getType(i) === 'primary',
+              },
+            ]"
           >
+            <div>防腐冰柜{{ i }}</div>
+            <div v-if="getType(i) !== 'info'">编号：10000</div>
+            <div v-if="getType(i) !== 'info'">死者姓名：张三</div>
+            <div v-if="getType(i) === 'primary'">状态：正常使用中</div>
+            <div v-if="getType(i) === 'primary'">温度：xxx</div>
+            <div v-if="getType(i) === 'primary'">湿度：xxx</div>
+            <div v-if="getType(i) === 'warning'">状态：温度偏高</div>
+            <div v-if="getType(i) === 'warning'">温度：xxx</div>
+            <div v-if="getType(i) === 'warning'">湿度：xxx</div>
+          </div>
         </div>
       </el-col>
     </el-row>
@@ -47,8 +64,8 @@
 </template>
 
 <script lang="ts" setup>
-const using = [2, 3, 4, 5];
-const status2 = [10, 14, 34, 20];
+const using = [3, 4, 5];
+const status2 = [10, 20];
 const getType = (i: number) => {
   if (using.includes(i)) {
     return "primary";

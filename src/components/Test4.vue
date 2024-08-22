@@ -36,9 +36,22 @@
             height: 100%;
           "
         >
-          <el-button :type="getType(i)" size="large" class="a-button"
-            >骨灰格{{ i }}</el-button
+          <div
+            style="width: 100%; height: 100%; font-size: small"
+            :class="[
+              'cell-hgrtft',
+              {
+                finish: getType(i) === 'info',
+                using: getType(i) === 'primary',
+              },
+            ]"
           >
+            <div>骨灰格{{ i }}</div>
+            <div v-if="getType(i) !== 'info'">编号：10000</div>
+            <div v-if="getType(i) !== 'info'">死者姓名：张三</div>
+            <div v-if="getType(i) !== 'info'">已存放时间：7天</div>
+            <div v-if="getType(i) === 'warning'">即将到期：3天后</div>
+          </div>
         </div>
       </el-col>
     </el-row>
@@ -46,10 +59,8 @@
 </template>
 
 <script lang="ts" setup>
-import { Delete, Search } from "@element-plus/icons-vue";
-
-const using = [2, 3, 4, 5];
-const status2 = [10, 14, 34, 20];
+const using = [3, 4, 5];
+const status2 = [10, 14, 20];
 const getType = (i: number) => {
   if (using.includes(i)) {
     return "primary";

@@ -33,7 +33,7 @@
             <el-date-picker
               style="width: 100%"
               type="date"
-              placeholder="Select date and time"
+              placeholder="选择日期"
             />
           </el-form-item>
 
@@ -61,9 +61,16 @@
       </el-dialog>
       <div>
         <span style="margin-right: 10px">日期筛选</span>
-        <el-date-picker type="date" placeholder="Select date and time" />
+        <el-date-picker type="date" placeholder="选择开始日期" />
         -
-        <el-date-picker type="date" placeholder="Select date and time" />
+        <el-date-picker type="date" placeholder="选择结束日期" />
+      </div>
+      <div>
+        <el-select placeholder="快速选择时间段" style="width: 150px">
+          <el-option label="1天内" />
+          <el-option label="3天内" />
+          <el-option label="7天内" />
+        </el-select>
       </div>
     </div>
     <el-row :gutter="20" class="row row1">
@@ -113,7 +120,7 @@
       >
     </el-row>
     <el-row :gutter="20" class="row row2">
-      <el-col :span="2">2024-08-01(今日) </el-col>
+      <el-col :span="2">2024-08-01 周四(今天) </el-col>
       <el-col :span="2">
         <div style="display: flex; flex-direction: column; gap: 10px"></div>
       </el-col>
@@ -121,31 +128,19 @@
         <div style="display: flex; flex-direction: column; gap: 10px"></div>
       </el-col>
       <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
+        <div class="cell-hgrtft using">
+          <div>编号：10000</div>
+          <div>死者姓名：张三</div>
+          <div>状态：进行中</div>
         </div>
       </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
       <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
-        </div>
-      </el-col>
-      <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
-        </div>
-      </el-col>
-      <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
+        <div class="cell-hgrtft">
+          <div>编号：10000</div>
+          <div>死者姓名：张三</div>
+          <div>状态：已预约</div>
         </div>
       </el-col>
       <el-col :span="2">
@@ -154,55 +149,29 @@
       <el-col :span="2">
         <div style="display: flex; flex-direction: column; gap: 10px"></div>
       </el-col>
-      <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
-        </div>
-      </el-col>
-      <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
-        </div>
-      </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
     </el-row>
     <el-row :gutter="20" class="row row2">
-      <el-col :span="2">2024-08-02(明日) </el-col>
+      <el-col :span="2">2024-08-02 周五(明天) </el-col>
       <el-col :span="2">
         <div style="display: flex; flex-direction: column; gap: 10px"></div>
       </el-col>
       <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px"></div>
-      </el-col>
-      <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
+        <div class="cell-hgrtft">
+          <div>编号：10000</div>
+          <div>死者姓名：张三</div>
+          <div>状态：已预约</div>
         </div>
       </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
       <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
-        </div>
-      </el-col>
-      <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
-        </div>
-      </el-col>
-      <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
+        <div class="cell-hgrtft">
+          <div>编号：10000</div>
+          <div>死者姓名：张三</div>
+          <div>状态：已预约</div>
         </div>
       </el-col>
       <el-col :span="2">
@@ -211,20 +180,26 @@
       <el-col :span="2">
         <div style="display: flex; flex-direction: column; gap: 10px"></div>
       </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col> </el-row
+    ><el-row :gutter="20" class="row row2">
+      <el-col :span="2">2024-08-03 周六</el-col>
       <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
-        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px"></div>
+      </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2">
+        <div style="display: flex; flex-direction: column; gap: 10px"></div>
       </el-col>
       <el-col :span="2">
-        <div style="display: flex; flex-direction: column; gap: 10px">
-          <el-button type="primary" size="large" class="a-button"
-            >预约详情</el-button
-          >
-        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px"></div>
       </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
     </el-row>
   </div>
 </template>

@@ -15,7 +15,7 @@
       <el-button type="primary">新增预约</el-button>
       <div>
         <span style="margin-right: 10px">日期筛选</span>
-        <el-date-picker type="datetime" placeholder="Select date and time" />
+        <el-date-picker type="date" placeholder="选择日期" />
       </div>
     </div>
     <div class="gridx">
@@ -28,15 +28,25 @@
       <div class="header">崇贤厅(大)</div>
       <div class="header">崇德厅(大)</div>
       <div class="aaa">08:00</div>
+      <div class="bbb"></div>
       <div
         class="bbb"
-        style="grid-row: 2 / 4; grid-column: 2; background-color: #79bbff"
+        style="grid-row: 3 / 5; grid-column: 2; background-color: #409eff"
       >
         <div>编号：200000</div>
+        <div>死者姓名：张三</div>
 
-        <div>状态: 进行中</div>
+        <div>状态: 使用中</div>
       </div>
-      <div class="bbb"></div>
+      <div
+        class="bbb"
+        style="grid-row: 2 / 4; grid-column: 5; background-color: #909399"
+      >
+        <div>编号：200000</div>
+        <div>死者姓名：张三</div>
+
+        <div>状态: 已完成</div>
+      </div>
       <div class="bbb"></div>
       <div class="bbb"></div>
       <div class="bbb"></div>
@@ -48,17 +58,16 @@
       <div class="bbb"></div>
       <div class="bbb"></div>
       <div class="bbb"></div>
-      <div class="bbb"></div>
       <div class="aaa">09:00</div>
-      <div class="bbb"></div>
       <div class="bbb"></div>
       <div
         class="bbb"
         style="grid-row: 5 / 7; grid-column: 3; background-color: #e6a23c"
       >
         <div>编号：200001</div>
+        <div>死者姓名：张三</div>
 
-        <div>状态: 等待中</div>
+        <div>状态: 已预约</div>
       </div>
       <div class="bbb"></div>
       <div class="bbb"></div>
