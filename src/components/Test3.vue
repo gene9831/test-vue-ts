@@ -178,6 +178,9 @@
       >
       <el-col :span="2"> </el-col>
       <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
+      <el-col :span="2"> </el-col>
       <el-col :span="2">
         <div class="cell-container">
           <el-button type="primary" class="flex-btn">
@@ -185,11 +188,8 @@
             <span>死者姓名：张三</span>
             <span>状态：已预约</span>
           </el-button>
-        </div>
-      </el-col>
-      <el-col :span="2"> </el-col>
-      <el-col :span="2"> </el-col>
-      <el-col :span="2"> </el-col>
+        </div></el-col
+      >
       <el-col :span="2"> </el-col> </el-row
     ><el-row :gutter="20" class="row row-3">
       <el-col :span="2">2024-08-03 周六</el-col>

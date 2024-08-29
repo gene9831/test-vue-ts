@@ -14,9 +14,17 @@
       <div>
         <el-button type="primary">批量归档</el-button>
       </div>
-      <div>
-        <el-input placeholder="搜索内容" style="width: 240px"></el-input>
-        <el-button :icon="Search" />
+      <div style="display: flex; gap: 10px">
+        <div>
+          <span style="margin-right: 10px">日期筛选</span>
+          <el-date-picker type="date" placeholder="选择开始日期" />
+          -
+          <el-date-picker type="date" placeholder="选择结束日期" />
+        </div>
+        <div>
+          <el-input placeholder="搜索内容" style="width: 240px"></el-input>
+          <el-button :icon="Search" />
+        </div>
       </div>
     </div>
     <el-table style="width: 100%" :data="tableData">

@@ -14,22 +14,39 @@
       <div>
         <el-button type="primary">导出</el-button>
       </div>
-      <div>
-        <el-input placeholder="搜索内容" style="width: 240px"></el-input>
-        <el-button :icon="Search" />
+      <div style="display: flex; gap: 10px">
+        <div>
+          <span style="margin-right: 10px">日期筛选</span>
+          <el-date-picker type="date" placeholder="选择开始日期" />
+          -
+          <el-date-picker type="date" placeholder="选择结束日期" />
+        </div>
+        <div>
+          <el-input placeholder="搜索内容" style="width: 240px"></el-input>
+          <el-button :icon="Search" />
+        </div>
       </div>
     </div>
     <el-table style="width: 100%" :data="tableData">
       <el-table-column type="selection" width="55"> </el-table-column>
 
       <el-table-column prop="fileNumber" label="档案编号"></el-table-column>
-      <el-table-column prop="time" label="归档时间"></el-table-column>
-      <el-table-column prop="number" label="包含档案数量"></el-table-column>
-      <el-table-column prop="admin" label="操作人"></el-table-column>
 
-      <el-table-column label="操作">
-        <el-button size="small">预览目录</el-button>
-      </el-table-column>
+      <el-table-column prop="fileNumber" label="资料编号"></el-table-column>
+      <el-table-column prop="name" label="死者姓名"></el-table-column>
+      <el-table-column prop="gender" label="性别"></el-table-column>
+      <el-table-column prop="nation" label="名族"></el-table-column>
+      <el-table-column prop="idnumber" label="死者证件号码"></el-table-column>
+      <el-table-column prop="address" label="户籍地址"></el-table-column>
+      <el-table-column prop="number1" label="火化证印刷号"></el-table-column>
+      <el-table-column prop="deadtime" label="死亡时间"></el-table-column>
+      <el-table-column prop="number2" label="死亡证编号"></el-table-column>
+      <el-table-column prop="burntime" label="火化时间"></el-table-column>
+      <el-table-column prop="contract" label="合同"></el-table-column>
+      <el-table-column prop="person" label="领证人"></el-table-column>
+
+      <el-table-column prop="attach" label="附件"></el-table-column>
+      <el-table-column prop="deadtime" label="归档时间"></el-table-column>
     </el-table>
   </div>
 </template>
@@ -38,52 +55,124 @@
 import { Search } from "@element-plus/icons-vue";
 const tableData = [
   {
+    status: "可归档",
     fileNumber: 10000,
-    number: 10,
-    time: "2000-10-10",
-    admin: "张三三",
+    name: "张三",
+    gender: "男",
+    nation: "汉族",
+    idnumber: "12345678901",
+    address: "xxx",
+    number1: "4412345",
+    deadtime: "2000-10-10",
+    number2: "D1234567",
+    burntime: "2000-10-20",
+    contract: "123456",
+    person: "张三三",
   },
   {
+    status: "缺少资料",
     fileNumber: 10000,
-    number: 10,
-    time: "2000-10-10",
-    admin: "张三三",
+    name: "张三",
+    gender: "男",
+    nation: "汉族",
+    idnumber: "12345678901",
+    address: "xxx",
+    number1: "4412345",
+    deadtime: "2000-10-10",
+    number2: "D1234567",
+    burntime: "2000-10-20",
+    contract: "123456",
+    person: "张三三",
   },
   {
+    status: "可归档",
     fileNumber: 10000,
-    number: 10,
-    time: "2000-10-10",
-    admin: "张三三",
+    name: "张三",
+    gender: "男",
+    nation: "汉族",
+    idnumber: "12345678901",
+    address: "xxx",
+    number1: "4412345",
+    deadtime: "2000-10-10",
+    number2: "D1234567",
+    burntime: "2000-10-20",
+    contract: "123456",
+    person: "张三三",
   },
   {
+    status: "可归档",
     fileNumber: 10000,
-    number: 10,
-    time: "2000-10-10",
-    admin: "张三三",
+    name: "张三",
+    gender: "男",
+    nation: "汉族",
+    idnumber: "12345678901",
+    address: "xxx",
+    number1: "4412345",
+    deadtime: "2000-10-10",
+    number2: "D1234567",
+    burntime: "2000-10-20",
+    contract: "123456",
+    person: "张三三",
   },
   {
+    status: "可归档",
     fileNumber: 10000,
-    number: 10,
-    time: "2000-10-10",
-    admin: "张三三",
+    name: "张三",
+    gender: "男",
+    nation: "汉族",
+    idnumber: "12345678901",
+    address: "xxx",
+    number1: "4412345",
+    deadtime: "2000-10-10",
+    number2: "D1234567",
+    burntime: "2000-10-20",
+    contract: "123456",
+    person: "张三三",
   },
   {
+    status: "可归档",
     fileNumber: 10000,
-    number: 10,
-    time: "2000-10-10",
-    admin: "张三三",
+    name: "张三",
+    gender: "男",
+    nation: "汉族",
+    idnumber: "12345678901",
+    address: "xxx",
+    number1: "4412345",
+    deadtime: "2000-10-10",
+    number2: "D1234567",
+    burntime: "2000-10-20",
+    contract: "123456",
+    person: "张三三",
   },
   {
+    status: "可归档",
     fileNumber: 10000,
-    number: 10,
-    time: "2000-10-10",
-    admin: "张三三",
+    name: "张三",
+    gender: "男",
+    nation: "汉族",
+    idnumber: "12345678901",
+    address: "xxx",
+    number1: "4412345",
+    deadtime: "2000-10-10",
+    number2: "D1234567",
+    burntime: "2000-10-20",
+    contract: "123456",
+    person: "张三三",
   },
   {
+    status: "可归档",
     fileNumber: 10000,
-    number: 10,
-    time: "2000-10-10",
-    admin: "张三三",
+    name: "张三",
+    gender: "男",
+    nation: "汉族",
+    idnumber: "12345678901",
+    address: "xxx",
+    number1: "4412345",
+    deadtime: "2000-10-10",
+    number2: "D1234567",
+    burntime: "2000-10-20",
+    contract: "123456",
+    person: "张三三",
   },
 ];
 </script>

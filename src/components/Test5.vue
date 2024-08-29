@@ -49,6 +49,7 @@
             <div v-if="isUsing(i)">死者姓名：张三</div>
             <div v-if="getType(i) === 'primary'">状态：使用中</div>
             <div v-if="getType(i) === 'warning'">状态：使用中(油量低)</div>
+            <div v-if="!isUsing(i)">状态：未使用</div>
             <div>温度：xxx</div>
             <div>油量：xxx</div>
           </div>
