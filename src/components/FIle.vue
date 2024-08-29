@@ -12,7 +12,6 @@
       "
     >
       <div>
-        <el-button type="primary">导入记录</el-button>
         <el-button type="primary">批量归档</el-button>
       </div>
       <div>
